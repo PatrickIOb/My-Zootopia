@@ -4,3 +4,25 @@
 .idea/
 
 .venv
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual environments ---
+venv/
+.env/
+.venv/
+
+# --- IDEs ---
+.idea/
+.vscode/
+
+# --- System files ---
+.DS_Store
+Thumbs.db
+
+# --- Other ---
+*.log

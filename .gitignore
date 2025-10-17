@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+.venv/bin
+# Ignore JetBrains IDE project files
+.idea/
+
+.venv

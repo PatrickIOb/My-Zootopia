@@ -12,26 +12,35 @@ with open("animals_template.html", "r") as html_file:
 output = ''  # define an empty string
 
 for animal_data in data:
+    #html formatting
+    output += '<li class="cards__item">'
+
     # Name
     if 'name' in animal_data:
-        output += f"Name: {animal_data['name']}\n"
+        output += f"Name: {animal_data['name']}<br/>\n"
 
     # Characteristics might not exist
     if 'characteristics' in animal_data:
         characteristics = animal_data['characteristics']
 
         if 'diet' in characteristics:
-            output += f"Diet: {characteristics['diet']}\n"
+            output += f"Diet: {characteristics['diet']}<br/>\n"
         if 'type' in characteristics:
-            output += f"Type: {characteristics['type']}\n"
+            output += f"Type: {characteristics['type']}<br/>\n"
 
     # Locations might not exist or be empty
     if 'locations' in animal_data and animal_data['locations']:
         locations = ", ".join(animal_data['locations'])
-        output += f"Location: {locations}\n"
+        output += f"Location: {locations}<br/>\n"
+
+    #end of list
+    output += '</li>'
 
     # Add a blank line between animals
     output += "\n"
+
+
+    print(output)
 
 
 # Replace the placeholder in the template
